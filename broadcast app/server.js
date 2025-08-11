@@ -1,5 +1,6 @@
 const net = requier('net');
 const readline = require('readline');
+const {parentWorker} = require('worker_threads');
 
 const PORT = 8080;
 
