@@ -13,7 +13,6 @@ function showMenu(){
 }
 
 function displayChannelsMenu(){
-
     console.log("<======= Channel Menu =======>");
     console.log("1. Subscribe to a channel");
     console.log("2. Unsubscribe from a channel");
@@ -39,6 +38,11 @@ function displayChannelOptions_publisher_(){
 function registerOrLogin(username, password) {
     // Function to handle user registration or login authentication
     while (true) {
+        console.log("Welcome to the Broadcast App!");
+        console.log("Please choose an option:");
+        console.log("1. Register");
+        console.log("2. Login");
+
         const rl = readline.createInterface({
             input: process.stdin,
             output: process.stdout
