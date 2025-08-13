@@ -1,7 +1,12 @@
 const net = requier('net');
+const { parentPort } = require('worker_threads');
 const readline = require('readline');
 
 const PORT = 8080;
+const HOST = 'localhost';
+let currentUser = null;
+let currentChannel = null;
+let socket = null;
 
 function showMenu(){
     console.log("<======= Broadcast App =======>");

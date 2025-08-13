@@ -1,5 +1,12 @@
 const {parentWorker} = require('worker_threads');
 
+// In-memory database
+const users = new Map();
+const channels = new Map();
+const userThreads = new Map();
+let nextUserId = 1;
+let nextChannelId = 1;
+
 // ---------------- User authentication -----------------
 
 function registerClient(username, password) {
@@ -60,11 +67,22 @@ let isJoining = (channelId, userId) => {
 }
 
 
-let userThreadId = (userId) => {
-
-}
+// ---------------- Thread management -----------------
 
 function userThreadId(userId) {
-    // Function to get the thread ID of a user
-    return userThreadId;
+    if (!userThreads.has(userId)) {
+        userThreads.set(userId, `thread_${userId}_${Date.now()}`);
+    }
+    return userThreads.get(userId);
 }
+
+
+module.exports = {
+    registerClient,
+    loginClient,
+    createChannel,
+    joinChannel,
+    sendMessage,
+    getChannelList,
+    userThreadId
+};
