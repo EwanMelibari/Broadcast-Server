@@ -9,11 +9,11 @@ let nextChannelId = 1;
 
 // ---------------- User authentication -----------------
 
-function registerClient(username, password) {
+function registerClient(username, password, callback) {
 
 }
 
-function loginClient(username, password) {
+function loginClient(username, password, callback) {
 
 }
 

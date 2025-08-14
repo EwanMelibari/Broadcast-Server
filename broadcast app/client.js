@@ -8,7 +8,7 @@ let currentUser = null;
 let currentChannel = null;
 let socket = null;
 
-function showMenu(){
+function showMenu(selection) {
     console.log("<======= Broadcast App =======>");
     console.log("1. Create channel");
     console.log("2. Join channel");
@@ -17,7 +17,7 @@ function showMenu(){
     console.log("<=============================>");
 }
 
-function displayChannelsMenu(){
+function displayChannelsMenu(selection){
     console.log("<======= Channel Menu =======>");
     console.log("1. Subscribe to a channel");
     console.log("2. Unsubscribe from a channel");
@@ -25,13 +25,13 @@ function displayChannelsMenu(){
     console.log("<=============================>");
 }
 
-function displayChannelOptions_subscriber_(){
+function displayChannelOptions_subscriber_(selection){
     console.log("<======= Subscriber Options =======>");
     console.log("1. Return to channel menu");
     console.log("<==================================>");
 }
 
-function displayChannelOptions_publisher_(){
+function displayChannelOptions_publisher_(selection){
     console.log("<======= Subscriber Options =======>");
     console.log("1. Turn on broadcast");
     console.log("2. Turn off broadcast");
@@ -40,7 +40,7 @@ function displayChannelOptions_publisher_(){
     console.log("<==================================>");
 }
 
-function registerOrLogin(username, password) {
+function registerOrLogin(username, password, callback) {
     // Function to handle user registration or login authentication
     while (true) {
         console.log("Welcome to the Broadcast App!");
