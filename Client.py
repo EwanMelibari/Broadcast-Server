@@ -44,7 +44,8 @@ def channelMenu(isLeader):
         print("5. Update channel name")
         print("5.return to menu")
     else:
-        print("1. Return to menu")
+        print("1. leave channel")
+        print("2. Return to menu")
 
     print("<======================================================>")
 
